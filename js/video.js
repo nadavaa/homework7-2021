@@ -37,7 +37,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 	  });
     console.log("Original loaction " + video.currentTime);
     video.currentTime += 15;
-    if (video.currentTime == 67.403333){ 
+    if (video.currentTime == video.duration){ 
 		console.log("Going back to beggining");
 		console.log("New location 0");
 	} else {
@@ -49,7 +49,7 @@ document.querySelector("#mute").addEventListener("click", function() {
     const btn = document.getElementById("mute");
 	
 	if(btn.innerText === "Mute"){
-        btn.innerText = "UnMute";
+        btn.innerText = "Unmute";
 		video.muted = true;
     }else{
         btn.innerText= "Mute";
@@ -70,7 +70,7 @@ i.addEventListener('input', function () {
 }, false);
 
 document.querySelector("#vintage").addEventListener("click", function() {
-	video.style.filter = "sepia(100%)"
+	video.style.add = querySelector(".oldSchool")
 
 });
 
