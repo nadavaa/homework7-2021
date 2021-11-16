@@ -35,7 +35,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 		video.currentTime = 0;
 		video.play();
 	  });
-    console.log("Original loaction " + video.currentTime);
+    console.log("Original location " + video.currentTime);
     video.currentTime += 15;
     if (video.currentTime == video.duration){ 
 		console.log("Going back to beggining");
@@ -70,11 +70,13 @@ i.addEventListener('input', function () {
 }, false);
 
 document.querySelector("#vintage").addEventListener("click", function() {
-	video.style.add = querySelector(".oldSchool")
+	var element = document.querySelector('.video');
+	element.classList.add("oldSchool");
 
 });
 
 document.querySelector("#orig").addEventListener("click", function() {
-	video.style.filter = "sepia(0%)"
+	var element = document.querySelector('.video');
+	element.classList.remove("oldSchool");
 
 });
