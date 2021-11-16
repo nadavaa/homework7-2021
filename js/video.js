@@ -31,15 +31,17 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-    video.addEventListener('ended', function(){
-		video.currentTime = 0;
-		video.play();
-	  });
     console.log("Original location " + video.currentTime);
     video.currentTime += 15;
     if (video.currentTime == video.duration){ 
+		// video.addEventListener('ended', function(){
+		// 	video.currentTime = 0;
+		// 	video.play();
+		//   });
+		video.currentTime = 0;
 		console.log("Going back to beggining");
 		console.log("New location 0");
+		video.play();
 	} else {
 	console.log("New location " + video.currentTime);
 	}
